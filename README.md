@@ -1,5 +1,5 @@
 # Release Drafter Config
-binxhealth's Release-Drafter base config
+binxhealth's Release-Drafter base config (based on https://github.com/jenkinsci/.github/)
 
 [Release Drafter](https://github.com/toolmantim/release-drafter) is a tool and GitHub action which helps to automate 
 management of releases notes. Basically, this tool generates changelog drafts using pull request metadata 
