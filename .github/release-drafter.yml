@@ -1,0 +1,51 @@
+# Configuration for Release Drafter: https://github.com/toolmantim/release-drafter
+name-template: 'v$NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
+
+# Emoji reference: https://gitmoji.carloscuesta.me/
+categories:
+  - title: ":boom: Breaking changes"
+    labels:
+      - breaking
+  - title: 🚨 Removed
+    label: removed
+  - title: ⚠️ Deprecated
+    label: deprecated
+  - title: 🚀 New features and improvements
+    labels:
+      - enhancement
+      - feature
+  - title: 🐛 Bug Fixes
+    labels:
+      - bug
+      - fix
+      - bugfix
+      - regression
+  - title: 📝 Documentation updates
+    label: documentation
+  # Renovate label
+  - title: 📦 Dependency updates
+    label: dependencies
+  - title: 👻 Maintenance
+    labels:
+      - chore
+      - internal
+  - title: 🚦 Tests
+    labels:
+      - test
+      - tests
+exclude-labels:
+  - reverted
+  - no-changelog
+  - skip-changelog
+  - invalid
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+template: |
+  <!-- Optional: add a release summary here -->
+  ## Changes
+
+  $CHANGES
+
+replacers:
+  - search: '/\[*ch(\d+)\]*\s*-*\s*/g'
+    replace: '[ch$1](https://app.clubhouse.io/binxhealth/story/$1) - '
