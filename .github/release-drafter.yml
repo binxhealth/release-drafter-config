@@ -53,4 +53,4 @@ template: |
 
 replacers:
   - search: '/\[*ch(\d+)\]*\s*-*\s*/g'
-    replace: '[ch$1](https://app.clubhouse.io/binxhealth/story/$1) - '
+    replace: '[Story $1](https://app.clubhouse.io/binxhealth/story/$1) - '
