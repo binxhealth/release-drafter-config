@@ -39,7 +39,7 @@ exclude-labels:
   - no-changelog
   - skip-changelog
   - invalid
-change-template: '- $TITLE $AUTHOR (#$NUMBER)'
+change-template: '- $TITLE - $AUTHOR (#$NUMBER)'
 template: |
   <!-- 
      - [ ] I have confirmed the head of master has a green check status
