@@ -39,6 +39,22 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+or using this content to reuse Draft Release reusable workflow:
+
+```yml
+name: Release Drafter
+on:
+   push:
+      branches:
+         - master
+
+jobs:
+   update_draft_release:
+      uses: binxhealth/release-drafter-config/.github/workflows/draft-release.yml@master
+      secrets: inherit
+```
+
+
 ### Releasing a component with Release Drafter
 
 1. Make sure that all pull requests in the release are properly labeled.

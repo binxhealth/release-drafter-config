@@ -1,0 +1,15 @@
+name: Reusable workflow example
+
+on:
+  workflow_call:
+
+jobs:
+  update_draft_release:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      # Drafts your next Release notes as Pull Requests are merged into "master" or "main"
+      - uses: release-drafter/release-drafter@3486aa7f1059bfbfa572c1092b74fb1bf32ee1c8
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
