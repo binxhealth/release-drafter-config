@@ -52,5 +52,5 @@ template: |
   $CHANGES
 
 replacers:
-  - search: '/\[*ch(\d+)\]*\s*-*\s*/g'
-    replace: '[Story $1](https://app.clubhouse.io/binxhealth/story/$1) - '
+  - search: '/\[*sc-*(\d+)\]*\s*-*\s*/g'
+    replace: '[Story $1](https://app.shortcut.com/binxhealth/story/$1) - '
